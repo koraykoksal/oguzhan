@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+li{
+    text-decoration: none;
+    cursor: pointer;
+    list-style: none;
+    font-size: 14px;
+    color: #fff;
+}
+
+ul .menu{
+    text-decoration: none;
+    cursor: pointer;
+    list-style: none;
+    font-size: 15px;
+    color: #fff;
+}
+
+ul .menu:hover{
+    color: #131E31;
+
+}
+
+.services:hover{
+    background-color: #F2F2F2;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 900px) {
+    .callCenterImg {
+      /* Bu alan 800px ve altındaki ekranlarda çalışır */
+      max-width: 400px;
+    }
+    .footerTitle1{
+        font-size: 30px;
+    }
+    .footerTitle2{
+        font-size: 14px;
+    }
+    .banner{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+  }
