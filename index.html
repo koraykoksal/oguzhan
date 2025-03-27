@@ -11,18 +11,7 @@
 
 <body>
 
-
-    <header 
-    style="
-  background: linear-gradient(to bottom, rgba(0, 70, 173, 0.7) 0%, rgba(0, 45, 114, 0.85) 100%) !important;
-  height: 60px;
-  color: white;
-  position: fixed;        /* 🧲 Sabit kalsın */
-  top: 0;                 /* 🧲 Sayfanın en üstünde başlasın */
-  left: 0;
-  width: 100%;            /* 🔁 Tam genişlik */
-  z-index: 9999;          /* 🔝 Her şeyin üstünde dursun */
-">
+    <header class="baslik">
         <nav style="
       display: flex;
       justify-content: space-between;
@@ -31,17 +20,18 @@
       height: 100%;
       font-family: Arial, Helvetica, sans-serif;
     ">
-            <a href="index.html"
-                style="color: #fff; text-decoration: none;display: flex;justify-content: center;gap: 15px;align-items: center;">
-                <i class="fa fa-car me-3"></i>
-                <h3 style="margin: 0;">
-                    Araç Muayene Randevu
-                </h3>
-            </a>
+            <div class="logo">
+                <a href="index.html"
+                    style="color: #fff; text-decoration: none;display: flex;justify-content: center;gap: 15px;align-items: center;">
+                    <i class="fa fa-car me-3"></i>
+                    <h3 style="margin: 0;">
+                        Araç Muayene Randevu
+                    </h3>
+                </a>
+            </div>
 
-            <div style="display: flex;justify-content: center;align-items: center;gap: 35px;">
+            <div class="menu" style="display: flex;justify-content: center;align-items: center;gap: 35px;">
                 <ul>
-
                     <a class="menu" href="index.html">
                         ANA SAYFA
                     </a>
@@ -51,24 +41,35 @@
                     <a class="menu" href="#hizmetlerimiz">
                         HİZMETLERİMİZ
                     </a>
-                    <a class="menu" href="tel:05425304155">
+                    <a class="menu" href="tel:08503800168">
                         İLETİŞİM
                     </a>
                 </ul>
-                <a href="tel:05425304155" style="color: #fff; text-decoration: none; font-weight: bold;">
+                <a href="tel:08503800168" style="color: #fff; text-decoration: none; font-weight: bold;">
                     RANDEVU AL <i class="fa fa-arrow-right ms-3"></i>
                 </a>
             </div>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">ANA SAYFA</a></li>
+                <li><a href="#hakkimizda">HAKKIMIZDA</a></li>
+                <li><a href="#hizmetlerimiz">HİZMETLERİMİZ</a></li>
+                <li><a href="tel:08503800168">İLETİŞİM</a></li>
+            </ul>
+
         </nav>
+
     </header>
 
     <main>
 
 
         <!-- BANNER -->
-        <article 
-        class="banner"
-        style="
+        <article style="
         position: relative;
         width: 100%;
         height: 100%; /* istediğin yüksekliği verebilirsin */
@@ -77,37 +78,16 @@
       ">
 
             <!-- Arka plan resim -->
-            <img src="./img/home1.jpg" alt="home" style="
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          display: block;
-        ">
+            <img class="bannerImg" src="./img/home1.jpg" alt="home">
 
             <!-- Yazı katmanı -->
-            <div style="
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba(0,0,0,0.5); /* Hafif karartma efekti */
-          color: white;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: flex-start;
-          text-align: left;
-          padding: 20px;
-          gap: 30px;
-        ">
-                <h5 style="margin-left: 50px;font-size: 20px;">// Araç Danışmanlık Hizmetleri //</h5>
+            <div class="bannerText">
+                <h5>// Araç Danışmanlık Hizmetleri //</h5>
 
-                <h1 style="margin-left: 50px;font-size: 60px;width: 60%;">Aracınıza Dair Her Şeyi Birlikte Planlayalım!
+                <h1>Aracınıza Dair Her Şeyi Birlikte Planlayalım!
                 </h1>
 
-                <a href="tel:05425304155"
-                    style="color: #fff; text-decoration: none; font-weight: bold;border: 1px solid #fff;padding: 20px;margin-left: 50px;">
+                <a href="tel:08503800168">
                     HEMEN İLETİŞİME GEÇ <i class="fa fa-arrow-right ms-3"></i>
                 </a>
 
@@ -135,7 +115,7 @@
                     style="width: 250px;display: flex;flex-direction: column;justify-content: flex-start;align-items: flex-start;gap: 25px;font-family: Arial, Helvetica, sans-serif;">
                     <h3 style="color: #0C2054;">Kalite Hizmet</h3>
                     <p style="color: #596277;">Uzman Ekibimiz ile Kaliteli Hizmet!</p>
-                    <a href="tel:05425304155"
+                    <a href="tel:08503800168"
                         style="color: #0C2054;text-decoration: none;border-bottom: 1px solid #dee2e6 !important;">
                         Randevu Oluştur
                     </a>
@@ -149,7 +129,7 @@
                     style="width: 250px;display: flex;flex-direction: column;justify-content: flex-start;align-items: flex-start;gap: 25px;font-family: Arial, Helvetica, sans-serif;">
                     <h3 style="color: #0C2054;">Kurumsal Hizmet</h3>
                     <p style="color: #596277;">Profesyonel Hizmetin Adresi!</p>
-                    <a href="tel:05425304155"
+                    <a href="tel:08503800168"
                         style="color: #0C2054;text-decoration: none;border-bottom: 1px solid #dee2e6 !important;">
                         Randevu Oluştur
                     </a>
@@ -163,7 +143,7 @@
                     style="width: 250px;;display: flex;flex-direction: column;justify-content: flex-start;align-items: flex-start;gap: 25px;font-family: Arial, Helvetica, sans-serif;">
                     <h3 style="color: #0C2054;">Müşteri Destek Ekibi</h3>
                     <p style="color: #596277;">Birebir Müşteri Danışmanı!</p>
-                    <a href="tel:05425304155"
+                    <a href="tel:08503800168"
                         style="color: #0C2054;text-decoration: none;border-bottom: 1px solid #dee2e6 !important;">
                         Randevu Oluştur
                     </a>
@@ -173,7 +153,7 @@
 
         <!-- HİZMETLERİMİZ -->
         <article id="hizmetlerimiz"
-            style="display: flex;font-family: Arial, Helvetica, sans-serif; width: 100%; margin: auto;margin-bottom: 30px;">
+            style="display: flex;font-family: Arial, Helvetica, sans-serif; width: 100%; margin: auto;margin-bottom: 30px;padding: 15px;">
 
             <div
                 style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 20px; width: 100%;">
@@ -206,8 +186,9 @@
                     <br>
 
 
-                    <div style="display: flex; flex-wrap: wrap; gap: 25px;justify-content: flex-start;align-items: flex-start;">
-                        
+                    <div
+                        style="display: flex; flex-wrap: wrap; gap: 25px;justify-content: flex-start;align-items: flex-start;">
+
                         <div style="display: flex; gap: 15px; max-width: 250px;">
 
                             <div
@@ -218,11 +199,13 @@
                                 <h1 style="color: #0C2054;font-size: 16px;">
                                     Randevu Alın
                                 </h1>
-                                <p style="color: #596277;">Müşteri Hizmetlerimizi arayarak danışmanlarımızdan randevu alın.</p>
+                                <p style="color: #596277;">Müşteri Hizmetlerimizi arayarak danışmanlarımızdan randevu
+                                    alın.</p>
                             </div>
                         </div>
 
-                        <div style="display: flex;justify-content: center;align-items: flex-start;gap: 15px;max-width: 250px;">
+                        <div
+                            style="display: flex;justify-content: center;align-items: flex-start;gap: 15px;max-width: 250px;">
 
                             <div
                                 style="max-width:55px;max-height: 40px;padding: 15px;border: 1px solid;background-color: #F2F2F2;color: #0C2054;font-size: 18px;display: flex;justify-content: center;align-items: center;">
@@ -232,11 +215,13 @@
                                 <h1 style="color: #0C2054;font-size: 16px;">
                                     Aracınızın Borç Durumunu Kontrol Edin
                                 </h1>
-                                <p style="color: #596277;">Unutmayın, borçları olan araçların muayene işlemleri başlatılmaz.</p>
+                                <p style="color: #596277;">Unutmayın, borçları olan araçların muayene işlemleri
+                                    başlatılmaz.</p>
                             </div>
                         </div>
 
-                        <div style="display: flex;justify-content: center;align-items: flex-start;gap: 15px;max-width: 250px;">
+                        <div
+                            style="display: flex;justify-content: center;align-items: flex-start;gap: 15px;max-width: 250px;">
 
                             <div
                                 style="max-width:55px;max-height: 40px;padding: 15px;border: 1px solid;background-color: #F2F2F2;color: #0C2054;font-size: 18px;display: flex;justify-content: center;align-items: center;">
@@ -246,11 +231,13 @@
                                 <h1 style="color: #0C2054;font-size: 16px;">
                                     Egzoz Gazı Emisyon Ölçümünüz Geçerli mi?
                                 </h1>
-                                <p style="color: #596277;">Geçerli bir ölçümünüz olmazsa aracınız "Ağır Kusurlu" olarak değerlendirilir.</p>
+                                <p style="color: #596277;">Geçerli bir ölçümünüz olmazsa aracınız "Ağır Kusurlu" olarak
+                                    değerlendirilir.</p>
                             </div>
                         </div>
 
-                        <div style="display: flex;justify-content: center;align-items: flex-start;gap: 15px;max-width: 250px;">
+                        <div
+                            style="display: flex;justify-content: center;align-items: flex-start;gap: 15px;max-width: 250px;">
 
                             <div
                                 style="max-width:55px;max-height: 40px;padding: 15px;border: 1px solid;background-color: #F2F2F2;color: #0C2054;font-size: 18px;display: flex;justify-content: center;align-items: center;">
@@ -260,11 +247,13 @@
                                 <h1 style="color: #0C2054;font-size: 16px;">
                                     Gerekli Belgeler Yanınızda Olsun
                                 </h1>
-                                <p style="color: #596277;">Ruhsat, Trafik Sigortası ve Vekalet Durumuna göre belgeniz yanınızda olmalı.</p>
+                                <p style="color: #596277;">Ruhsat, Trafik Sigortası ve Vekalet Durumuna göre belgeniz
+                                    yanınızda olmalı.</p>
                             </div>
                         </div>
 
-                        <div style="display: flex;justify-content: center;align-items: flex-start;gap: 15px;max-width: 250px;">
+                        <div
+                            style="display: flex;justify-content: center;align-items: flex-start;gap: 15px;max-width: 250px;">
 
                             <div
                                 style="max-width:55px;max-height: 40px;padding: 15px;border: 1px solid;background-color: #F2F2F2;color: #0C2054;font-size: 18px;display: flex;justify-content: center;align-items: center;">
@@ -274,11 +263,13 @@
                                 <h1 style="color: #0C2054;font-size: 16px;">
                                     Gerekli Ekipmanlar Listesi
                                 </h1>
-                                <p style="color: #596277;">İlkyardım Çantası, Reflektör, Yangın Söndürme Cihazı ve Stepne bulunmalı.</p>
+                                <p style="color: #596277;">İlkyardım Çantası, Reflektör, Yangın Söndürme Cihazı ve
+                                    Stepne bulunmalı.</p>
                             </div>
                         </div>
 
-                        <div style="display: flex;justify-content: center;align-items: flex-start;gap: 15px;max-width: 250px;">
+                        <div
+                            style="display: flex;justify-content: center;align-items: flex-start;gap: 15px;max-width: 250px;">
 
                             <div
                                 style="max-width:55px;max-height: 40px;padding: 15px;border: 1px solid;background-color: #F2F2F2;color: #0C2054;font-size: 18px;display: flex;justify-content: center;align-items: center;">
@@ -303,9 +294,7 @@
     </main>
 
 
-    <footer 
-    
-    style="
+    <footer style="
         width: 100%;
         height: 100%;
         display: flex;
@@ -325,8 +314,7 @@
           object-fit: cover;
         ">
 
-        <div 
-        style="
+        <div style="
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -340,8 +328,10 @@
         color: #fff;
         ">
 
-            <h2 class="footerTitle1" style="margin-left: 50px;font-size: 40px;width: 60%;">Uzman Ekibimizle Hemen İletişime Geçin!</h2>
-            <p class="footerTitle2" style="margin-left: 50px;font-size: 16px">Muayene süresi gelen araç yada süresi bitmiş olan Araç
+            <h2 class="footerTitle1" style="margin-left: 50px;font-size: 40px;width: 60%;">Uzman Ekibimizle Hemen
+                İletişime Geçin!</h2>
+            <p class="footerTitle2" style="margin-left: 50px;font-size: 16px">Muayene süresi gelen araç yada süresi
+                bitmiş olan Araç
                 sahipleri için internet üzerinden Tüvtürk muayene
                 öncesi gerekli bilgileri edinmek veya randevu rezarvasyonu alabilmeniz için danışmanlık hizmeti
                 veriyoruz.

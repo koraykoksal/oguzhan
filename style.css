@@ -1,18 +1,18 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 
-ul{
+ul {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 25px;
 }
 
-li{
+li {
     text-decoration: none;
     cursor: pointer;
     list-style: none;
@@ -20,7 +20,7 @@ li{
     color: #fff;
 }
 
-ul .menu{
+ul .menu {
     text-decoration: none;
     cursor: pointer;
     list-style: none;
@@ -28,30 +28,224 @@ ul .menu{
     color: #fff;
 }
 
-ul .menu:hover{
+ul .menu:hover {
     color: #131E31;
 
 }
 
-.services:hover{
+.services:hover {
     background-color: #F2F2F2;
     border-radius: 5px;
 }
 
+
+.hamburger {
+    display: none;
+}
+
+.nav-links {
+    display: none;
+}
+
+.baslik {
+    background: linear-gradient(to bottom, rgba(0, 70, 173, 0.7) 0%, rgba(0, 45, 114, 0.85) 100%) !important;
+    height: 60px;
+    color: white;
+    position: fixed;
+    /* 🧲 Sabit kalsın */
+    top: 0;
+    /* 🧲 Sayfanın en üstünde başlasın */
+    left: 0;
+    width: 100%;
+    /* 🔁 Tam genişlik */
+    z-index: 9999;
+    /* 🔝 Her şeyin üstünde dursun */
+}
+
+.bannerImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.bannerText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Hafif karartma efekti */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 20px;
+    gap: 30px;
+}
+
+.bannerText h5 {
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+.bannerText h1 {
+    margin-left: 50px;
+    font-size: 60px;
+    width: 60%;
+}
+
+
+.bannerText a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #fff;
+    padding: 20px;
+    margin-left: 50px;
+}
+
+
+
 @media screen and (max-width: 900px) {
     .callCenterImg {
-      /* Bu alan 800px ve altındaki ekranlarda çalışır */
-      max-width: 400px;
+        /* Bu alan 800px ve altındaki ekranlarda çalışır */
+        max-width: 400px;
     }
-    .footerTitle1{
+
+    .footerTitle1 {
         font-size: 30px;
     }
-    .footerTitle2{
+
+    .footerTitle2 {
         font-size: 14px;
     }
-    .banner{
-        width: 50%;
+
+    footer img {
+        max-height: 200px;
+    }
+
+    footer div {
+        padding: 15px !important;
+        gap: 15px;
+    }
+
+    .footerTitle1 {
+        font-size: 24px !important;
+        width: 90% !important;
+        margin-left: 10px !important;
+    }
+
+    .footerTitle2 {
+        font-size: 14px !important;
+        width: 90%;
+        margin-left: 10px !important;
+    }
+
+    .banner {
+        height: auto !important;
+    }
+
+    .banner img {
+        height: auto;
+    }
+
+    .banner div {
+        padding: 20px !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        gap: 20px !important;
+    }
+
+    .banner h1 {
+        font-size: 24px !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    .banner h5 {
+        font-size: 16px !important;
+        margin-left: 0 !important;
+    }
+
+    .banner a {
+        margin-left: 0 !important;
+        padding: 15px 20px !important;
+        font-size: 14px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        display: none;
+        padding: 20px 0;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li a {
+        color: #fff;
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+    }
+
+    .nav-links li a:hover {
+        color: rgba(0, 70, 173, 0.9);
+    }
+
+    nav {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .bannerText {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
-  }
+
+    .bannerText h5 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .bannerText h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .bannerText a {
+        font-size: 18px;
+    }
+
+    .bannerImg {
+        height: 400px;
+    }
+
+}
